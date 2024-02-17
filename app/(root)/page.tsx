@@ -6,7 +6,7 @@ const page = () => {
     <div>
       Hello world
       
-      <UserButton />
+      
     </div>
   )
 }
