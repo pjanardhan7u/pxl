@@ -14,7 +14,7 @@ const page = async ({ searchParams }: SearchParamProps)  => {
     <>
        <section className="home">
         <h1 className="home-heading">
-          Unleash Your Creative Vision with Imaginify
+          Let&apos;s do wonders with pxlme
         </h1>
         <ul className="flex-center w-full gap-20">
           {navLinks.slice(1, 5).map((link) => (
