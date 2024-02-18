@@ -230,7 +230,7 @@ async function onSubmit(values: z.infer<typeof formSchema>) {
                 onValueChange={(value) =>
                   onSelectFieldHandler(value, field.onChange)
                 }
-                // value={field.value}
+                value={field.value}
               >
                 <SelectTrigger className="select-field">
                   <SelectValue placeholder="Select size" />
