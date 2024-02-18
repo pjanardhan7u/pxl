@@ -33,6 +33,7 @@ import { CustomField } from "./CustomField";
 import { useEffect, useState, useTransition } from "react"
 import { updateCredits } from "@/lib/actions/user.actions"
 import MediaUploader from "./MediaUploader";
+import TransformedImage from "./TransformedImage";
 
 
 
@@ -118,7 +119,7 @@ const TransformationForm = ({
   }
 
 
-// TODO: return to updateCredits
+// TODO: update cretitFees to something
   const onTransformHandler = async () => {
     setIsTransforming(true)
 
@@ -129,7 +130,7 @@ const TransformationForm = ({
     setNewTransformation(null)
 
     startTransition(async () => {
-      // await updateCredits(userId, creditFee)
+      await updateCredits(userId, -1)
     })
   }
 
@@ -242,14 +243,14 @@ const TransformationForm = ({
             )}
           />
 
-          {/* <TransformedImage 
+          <TransformedImage 
             image={image}
             type={type}
             title={form.getValues().title}
             isTransforming={isTransforming}
             setIsTransforming={setIsTransforming}
             transformationConfig={transformationConfig}
-          /> */}
+          />
         </div>
 
 <div className="flex flex-col gap-4">
