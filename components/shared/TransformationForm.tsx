@@ -36,6 +36,7 @@ import MediaUploader from "./MediaUploader";
 import TransformedImage from "./TransformedImage";
 import { addImage, updateImage } from "@/lib/actions/image.actions";
 import { getCldImageUrl } from "next-cloudinary";
+import { InsufficientCreditsModal } from "./InsufficientCreditsModal";
 
 
 
@@ -195,17 +196,22 @@ async function onSubmit(values: z.infer<typeof formSchema>) {
     setNewTransformation(null)
 
     startTransition(async () => {
-      await updateCredits(userId, -1)
+      await updateCredits(userId, creditFee)
     })
   }
 
-
+  useEffect(() => {
+    if(image && (type === 'restore' || type === 'removeBackground')) {
+      setNewTransformation(transformationType.config)
+    }
+  }, [image, transformationType.config, type])
 
 
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      {creditBalance < Math.abs(creditFee) && <InsufficientCreditsModal />}
         <CustomField
           control={form.control}
           name="title"
