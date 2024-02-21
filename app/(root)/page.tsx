@@ -12,7 +12,7 @@ const page = async ({ searchParams }: SearchParamProps)  => {
 
   return (
     <>
-       {/* <section className="home t bg-pink-500">
+       <section className="home t bg-blue-500">
         <h1 className="home-heading">
           Let&apos;s do wonders with pxlme
         </h1>
@@ -30,7 +30,8 @@ const page = async ({ searchParams }: SearchParamProps)  => {
             </Link>
           ))}
         </ul>
-      </section> */}
+      </section>
+      
 
       <section className="sm:mt-12">
         <Collection 
