@@ -16,6 +16,7 @@ const page = async ({ searchParams }: SearchParamProps)  => {
         <h1 className="home-heading">
           Let&apos;s do wonders with pxlme
         </h1>
+        <p className="text-white">Login with google to get all features for free</p>
         <ul className="flex-center w-full gap-20">
           {navLinks.slice(1, 5).map((link) => (
             <Link
