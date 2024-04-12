@@ -150,7 +150,7 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
     handleError(error)
   }
 }
-
+// 
 // GET IMAGES BY USER
 export async function getUserImages({
   limit = 9,

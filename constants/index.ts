@@ -19,6 +19,7 @@ export const navLinks = [
     route: "/transformations/add/remove",
     icon: "/assets/icons/scan.svg",
   },
+  // 
   {
     label: "Object Recolor",
     route: "/transformations/add/recolor",
